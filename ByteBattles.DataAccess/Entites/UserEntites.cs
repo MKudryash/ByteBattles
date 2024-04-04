@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ByteBattles.DataAccess.Entites;
 
-public partial class User
+public partial class UserEntites
 {
     public Guid Id { get; set; }
 
@@ -11,5 +11,5 @@ public partial class User
 
     public string? Encryptedpassword { get; set; }
 
-    public string? Enail { get; set; }
+    public string? Email { get; set; }
 }

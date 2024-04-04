@@ -14,7 +14,7 @@ public partial class ByteBattlesDbContext : DbContext
     {
     }
 
-    public virtual DbSet<User> Users { get; set; }
+    public virtual DbSet<UserEntites> Users { get; set; }
     private readonly IConfiguration _configuration;
     public ByteBattlesDbContext(IConfiguration configuration)
     {
@@ -25,7 +25,7 @@ public partial class ByteBattlesDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<User>(entity =>
+        modelBuilder.Entity<UserEntites>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("users_pkey");
 
@@ -34,9 +34,9 @@ public partial class ByteBattlesDbContext : DbContext
             entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("id");
-            entity.Property(e => e.Enail)
+            entity.Property(e => e.Email)
                 .HasColumnType("character varying")
-                .HasColumnName("enail");
+                .HasColumnName("email");
             entity.Property(e => e.Encryptedpassword)
                 .HasColumnType("character varying")
                 .HasColumnName("encryptedpassword");
