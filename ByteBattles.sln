@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteBattles.API", "ByteBatt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteBattles.Core", "ByteBattles.Core\ByteBattles.Core.csproj", "{17F39A11-E17E-43ED-A440-783BFCF85754}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteBattles.DataAccess", "ByteBattles.DataAccess\ByteBattles.DataAccess.csproj", "{335D4F75-A598-4617-A2ED-D990DA40C35E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{17F39A11-E17E-43ED-A440-783BFCF85754}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17F39A11-E17E-43ED-A440-783BFCF85754}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17F39A11-E17E-43ED-A440-783BFCF85754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{335D4F75-A598-4617-A2ED-D990DA40C35E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{335D4F75-A598-4617-A2ED-D990DA40C35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{335D4F75-A598-4617-A2ED-D990DA40C35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{335D4F75-A598-4617-A2ED-D990DA40C35E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
