@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ByteBattles.DataAccess.Entites;
 
-public partial class UserEntites
+public partial class UserEntity
 {
     public Guid Id { get; set; }
 

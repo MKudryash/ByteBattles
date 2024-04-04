@@ -23,7 +23,7 @@ namespace ByteBattles.DataAccess.Repositories
         }
         public async Task Add(User user)
         {
-            var userEntity = new UserEntites() {
+            var userEntity = new UserEntity() {
                 Id = user.Id,
                 Email = user.Email,
                 Encryptedpassword = user.EncryptedPassword,
