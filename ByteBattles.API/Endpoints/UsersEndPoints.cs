@@ -1,4 +1,7 @@
 ﻿
+using ByteBattles.API.Contracts.Users;
+using ByteBattles.Application.Services;
+
 namespace ByteBattles.API.Endpoints
 {
     public static class UsersEndPoints
@@ -11,12 +14,14 @@ namespace ByteBattles.API.Endpoints
             return app;
         }
 
-        private static async Task<IResult> SigIn()
+        private static async Task<IResult> SigUp(SignUpRequest signUpRequest, UsersServices usersServices)
         {
-            throw new NotImplementedException();
+            await usersServices.SignUp(signUpRequest.UserName,signUpRequest.Email,signUpRequest.Password);
+
+            return Results.Ok();
         }
 
-        private static async Task<IResult> SigUp()
+        private static async Task<IResult> SigIn()
         {
             throw new NotImplementedException();
         }

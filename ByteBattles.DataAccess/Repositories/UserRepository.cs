@@ -1,29 +1,26 @@
 ﻿using AutoMapper;
+using ByteBattles.Core.Interfaces.Repositories;
 using ByteBattles.Core.Models;
 using ByteBattles.DataAccess.Entites;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ByteBattles.DataAccess.Repositories
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
         private readonly ByteBattlesDbContext _context;
         private readonly IMapper _mapper;
 
 
-        public UserRepository(ByteBattlesDbContext context,IMapper mapper)
+        public UserRepository(ByteBattlesDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
         public async Task Add(User user)
         {
-            var userEntity = new UserEntity() {
+            var userEntity = new UserEntity()
+            {
                 Id = user.Id,
                 Email = user.Email,
                 Encryptedpassword = user.EncryptedPassword,

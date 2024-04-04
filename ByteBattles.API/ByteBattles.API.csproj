@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ByteBattles.Application\ByteBattles.Application.csproj" />
     <ProjectReference Include="..\ByteBattles.DataAccess\ByteBattles.DataAccess.csproj" />
   </ItemGroup>
 
