@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteBattles.API", "ByteBatt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteBattles.Application", "ByteBattles.Application\ByteBattles.Application.csproj", "{DED1EECB-CB08-482E-B6E1-44D09718DC6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteBattles.Infrastructure", "..\ByteBattles.Infrastructure\ByteBattles.Infrastructure.csproj", "{ADDC5545-7B33-4012-8C48-5E8D1E3DB1F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DED1EECB-CB08-482E-B6E1-44D09718DC6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DED1EECB-CB08-482E-B6E1-44D09718DC6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DED1EECB-CB08-482E-B6E1-44D09718DC6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADDC5545-7B33-4012-8C48-5E8D1E3DB1F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADDC5545-7B33-4012-8C48-5E8D1E3DB1F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADDC5545-7B33-4012-8C48-5E8D1E3DB1F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADDC5545-7B33-4012-8C48-5E8D1E3DB1F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
