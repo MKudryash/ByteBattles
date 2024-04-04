@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteBattlesAPI", "ByteBattlesAPI\ByteBattlesAPI.csproj", "{DF095EC2-2EF4-4606-9DEF-72F83FDC380A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteBattles.API", "ByteBattlesAPI\ByteBattles.API.csproj", "{DF095EC2-2EF4-4606-9DEF-72F83FDC380A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteBattles.Core", "ByteBattles.Core\ByteBattles.Core.csproj", "{17F39A11-E17E-43ED-A440-783BFCF85754}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DF095EC2-2EF4-4606-9DEF-72F83FDC380A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF095EC2-2EF4-4606-9DEF-72F83FDC380A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF095EC2-2EF4-4606-9DEF-72F83FDC380A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17F39A11-E17E-43ED-A440-783BFCF85754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17F39A11-E17E-43ED-A440-783BFCF85754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17F39A11-E17E-43ED-A440-783BFCF85754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17F39A11-E17E-43ED-A440-783BFCF85754}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
