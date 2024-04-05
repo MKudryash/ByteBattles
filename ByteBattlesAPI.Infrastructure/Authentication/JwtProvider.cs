@@ -1,15 +1,12 @@
 ﻿using ByteBattles.Core.Models;
+using ByteBattles.Apllication.Interfaces.Auth;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace ByteBattlesAPI.Infrastructure.Authentication
+namespace ByteBattles.Infrastructure.Authentication
 {
     public class JwtProvider(IOptions<JwtOptions> options) : IJwtProvider
     {

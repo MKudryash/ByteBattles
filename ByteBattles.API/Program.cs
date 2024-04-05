@@ -3,8 +3,11 @@ using ByteBattles.Application.Interfaces.Auth;
 using ByteBattles.Application;
 using ByteBattles.DataAccess;
 using ByteBattles.DataAccess.Mappings;
-using ByteBattlesAPI.Infrastructure.Authentication;
+using ByteBattles.Infrastructure.Authentication;
 using Microsoft.AspNetCore.CookiePolicy;
+using Microsoft.OpenApi.Models;
+using ByteBattles.Apllication.Interfaces.Auth;
+using ByteBattles.Infrastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,15 +21,25 @@ services.AddAuthentication("Bearer");
 
 services.AddEndpointsApiExplorer();
 
-services.AddSwaggerGen();
+services.AddSwaggerGen(option =>
+{
+    option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 1safsfsdfdfd\"",
+    });
+});
 
 services
     .AddPersistence(configuration)
-    .AddApplication();
+    .AddApplication()
+   .AddInfrastructure();
 services.Configure<JwtOptions>(configuration.GetSection(nameof(JwtOptions)));
 
-services.AddScoped<IJwtProvider, JwtProvider>();
-services.AddScoped<IPasswordHasher, PasswordHasher>();
 
 services.AddAutoMapper(typeof(DataBaseMappings));
 

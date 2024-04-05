@@ -1,6 +1,6 @@
 ﻿using ByteBattles.Core.Models;
 
-namespace ByteBattlesAPI.Infrastructure.Authentication
+namespace ByteBattles.Apllication.Interfaces.Auth
 {
     public interface IJwtProvider
     {

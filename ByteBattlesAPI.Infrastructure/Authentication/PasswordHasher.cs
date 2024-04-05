@@ -1,6 +1,6 @@
 ﻿using ByteBattles.Application.Interfaces.Auth;
 
-namespace ByteBattlesAPI.Infrastructure.Authentication
+namespace ByteBattles.Infrastructure.Authentication
 {
     public class PasswordHasher : IPasswordHasher
     {

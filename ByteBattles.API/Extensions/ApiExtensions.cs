@@ -1,5 +1,5 @@
 ﻿using ByteBattles.API.Endpoints;
-using ByteBattlesAPI.Infrastructure.Authentication;
+using ByteBattles.Infrastructure.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;

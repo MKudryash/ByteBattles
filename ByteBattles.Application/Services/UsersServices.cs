@@ -1,8 +1,8 @@
-﻿using ByteBattles.Application.Interfaces.Auth;
+﻿using ByteBattles.Apllication.Interfaces.Auth;
+using ByteBattles.Application.Interfaces.Auth;
 using ByteBattles.Core.Interfaces.Repositories;
 using ByteBattles.Core.Interfaces.Services;
 using ByteBattles.Core.Models;
-using ByteBattlesAPI.Infrastructure.Authentication;
 
 namespace ByteBattles.Application.Services
 {
