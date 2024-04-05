@@ -22,9 +22,10 @@ namespace ByteBattles.API.Endpoints
             return Results.Ok();
         }
 
-        private static async Task<IResult> SigIn(SignInRequest request,UsersServices usersServices)
+        private static async Task<IResult> SigIn(SignInRequest request,UsersServices usersServices, HttpContext context)
         {
             var token = await usersServices.SignIn(request.Email, request.Password);
+            context.Response.Cookies.Append("secretCookie", token);
             return Results.Ok(token);
         }
     }

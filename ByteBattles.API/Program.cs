@@ -4,6 +4,7 @@ using ByteBattles.Application;
 using ByteBattles.DataAccess;
 using ByteBattles.DataAccess.Mappings;
 using ByteBattlesAPI.Infrastructure.Authentication;
+using Microsoft.AspNetCore.CookiePolicy;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,7 @@ var services = builder.Services;
 
 var configuration = builder.Configuration;
 
+services.AddApiAuthentication(configuration);
 
 services.AddEndpointsApiExplorer();
 
@@ -40,9 +42,14 @@ if (app.Environment.IsDevelopment())
 
 app.AddMappedEndpoints();
 
-app.MapGet("get", () =>
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.UseCookiePolicy(new CookiePolicyOptions
 {
-    return Results.Ok("ok");
-}).RequireAuthorization("AdminPolicy");
+    MinimumSameSitePolicy = SameSiteMode.Strict,
+    HttpOnly = HttpOnlyPolicy.Always,
+    Secure = CookieSecurePolicy.Always
+});
 
 app.Run();

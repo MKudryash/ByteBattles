@@ -11,8 +11,7 @@ namespace ByteBattles.API.Extensions
     public static class ApiExtensions
     {
         public static void AddMappedEndpoints(this IEndpointRouteBuilder app)
-        {
-         
+        {         
             app.MapUsersEndpoints();
         }
 
@@ -55,18 +54,10 @@ namespace ByteBattles.API.Extensions
                     };
                 });
 
-           /* services.AddScoped<IPermissionService, PermissionService>();
-            services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();*/
+            /* services.AddScoped<IPermissionService, PermissionService>();
+             services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();*/
 
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("AdminPolicy", policy =>
-                {
-                    policy.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);
-
-                   // policy.Requirements.Add(new PermissionRequirement([Permission.CreateCourse]));
-                });
-            });
+            services.AddAuthorization();
         }
 /*
         public static IEndpointConventionBuilder RequirePermissions<TBuilder>(
