@@ -11,12 +11,15 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ByteBattles.Application\ByteBattles.Application.csproj" />
+    <ProjectReference Include="..\ByteBattles.Core\ByteBattles.Core.csproj" />
     <ProjectReference Include="..\ByteBattles.DataAccess\ByteBattles.DataAccess.csproj" />
+    <ProjectReference Include="..\ByteBattlesAPI.Infrastructure\ByteBattlesAPI.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

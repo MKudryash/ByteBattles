@@ -1,6 +1,9 @@
 ﻿
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace ByteBattles.Core.Models
 {
+    
     public class User
     {
 

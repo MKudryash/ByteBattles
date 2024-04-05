@@ -1,6 +1,8 @@
-﻿namespace ByteBattles.API.Contracts.Users
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ByteBattles.API.Contracts.Users
 {
-    public class SignInRequest
-    {
-    }
+    public record SignInRequest
+    ([Required] string Password,
+    [Required] string Email);
 }
