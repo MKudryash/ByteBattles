@@ -14,6 +14,7 @@ var services = builder.Services;
 var configuration = builder.Configuration;
 
 services.AddApiAuthentication(configuration);
+services.AddAuthentication("Bearer");
 
 services.AddEndpointsApiExplorer();
 
