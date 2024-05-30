@@ -14,8 +14,6 @@ namespace ByteBattles.DataAccess
         this IServiceCollection services,
         IConfiguration configuration)
         {
-            Trace.Listeners.Add(new TextWriterTraceListener("_.log"));
-            Trace.WriteLine(configuration["ConnectionString:ByteBattlesDbStr"] + "23423423243");
             services.AddDbContext<ByteBattlesDbContext>(options =>
             {
                 options.UseNpgsql(configuration["ConnectionString:ByteBattlesDbStr"]);
