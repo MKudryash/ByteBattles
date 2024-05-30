@@ -12,6 +12,13 @@ public partial class ByteBattlesDbContext(DbContextOptions<ByteBattlesDbContext>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new UserConfiguration());
+        modelBuilder.ApplyConfiguration(new LanguageProgrammingConfiguration());
+        modelBuilder.ApplyConfiguration(new TagConfiguration());
+        modelBuilder.ApplyConfiguration(new TaskConfiguration());
+        modelBuilder.ApplyConfiguration(new TaskTagConfiguration());
+        modelBuilder.ApplyConfiguration(new CompletedTaskConfiguration());
+        modelBuilder.ApplyConfiguration(new FavoriteTaskConfiguration());
+        modelBuilder.ApplyConfiguration(new LpTaskConfiguration());
 
         OnModelCreatingPartial(modelBuilder);
     }
